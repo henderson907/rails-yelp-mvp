@@ -2,6 +2,6 @@
   <h1>Restaurants</h1>
 
   <% @restaurants.each do |restaurant| %>
-    <%= link_to "#{restaurant.name}", restaurant_path(restaurant.id) %>
+    <h5><%= link_to "#{restaurant.name}", restaurant_path(restaurant.id) %></h5>
   <% end %>
 </div>
