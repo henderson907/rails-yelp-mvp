@@ -16,3 +16,9 @@ Restaurant.destroy_all
                     phone_number: Faker::PhoneNumber.phone_number,
                     category: %w[chinese italian japanese french belgian].sample)
 end
+
+for i in (1..10)
+  3.times do
+    Review.create(rating: %w[1 2 3 4 5].sample, content: Faker::Restaurant.review, restaurant_id: i)
+  end
+end
